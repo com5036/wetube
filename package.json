@@ -4,19 +4,21 @@
   "description": "Cloning Youtube with Vanilla and NodeJs",
   "author": "Ji seong Park",
   "dependencies": {
+    "@babel/core": "^7.13.14",
     "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.13.12",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
+    "core-js": "^3.10.0",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
   },
   "scripts": {
     "start": "nodemon --exec babel-node init.js --delay 2"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.14",
     "nodemon": "^2.0.7"
   }
 }

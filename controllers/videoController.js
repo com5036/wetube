@@ -1,7 +1,25 @@
-export const Home = (req, res) => res.send("Home");
-export const videos = (req, res) => res.send("videos");
-export const videoSearch = (req, res) => res.send("Search");
-export const upload = (req, res) => res.send("upload");
-export const videoDetail = (req, res) => res.send("video detail");
-export const editVideo = (req, res) => res.send("edit video");
-export const deleteVideo = (req, res) => res.send("delete video");
+import {videos} from "../db"
+
+
+export const Home = (req, res) => 
+    res.render("home", {pageTitle: "Home", videos});
+
+export const search = (req, res) => {
+    const {
+        query: {term: searchingBy}
+    } = req;
+    res.render("search",{pageTitle: "Search", searchingBy, videos});
+}
+    
+
+export const upload = (req, res) => 
+    res.render("upload",{pageTitle: "Upload"});
+
+export const videoDetail = (req, res) => 
+    res.render("videoDetail",{pageTitle: "Vedio Detail"});
+
+export const editVideo = (req, res) => 
+    res.render("editVideo",{pageTitle: "Edit Video"});
+
+ export const deleteVideo = (req, res) => 
+     res.render("deleteVideo",{pageTitle: "Delete Video"});
